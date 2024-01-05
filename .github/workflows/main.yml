@@ -1,5 +1,9 @@
 name: "vprofile-app-actions"
-on: workflow_dispatch
+on:
+    push:
+      branches:
+        - main
+    workflow_dispatch:
 env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: my-test-repo
@@ -48,4 +52,3 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_URL }} #OPTIONAL
 
-#
