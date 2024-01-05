@@ -3,7 +3,7 @@ on: workflow_dispatch
 env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: my-test-repo
-  EKS_CLUSTER: eks-cluster
+  #EKS_CLUSTER: eks-cluster
 jobs:
   testing:
     runs-on: ubuntu-latest
