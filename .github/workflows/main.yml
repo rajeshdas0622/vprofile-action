@@ -1,9 +1,5 @@
-name: "vprofile-app-actions"
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+name: vprofile-app-actions
+on: workflow_dispatch
 env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: my-test-repo
@@ -11,6 +7,9 @@ env:
 jobs:
   testing:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
     steps:
       - name: code checkout
         uses: actions/checkout@v4
